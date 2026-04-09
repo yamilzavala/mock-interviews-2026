@@ -1,4 +1,4 @@
-🧪 PARTE 1 — React (NZ REAL)
+🧪 PARTE 1 
 🧩 Enunciado
 
 👉 Optimistic Like Button (con rollback)

@@ -1,4 +1,4 @@
-🧪 🧩 Enunciado estilo entrevista (NZ REAL)
+🧪 🧩 Enunciado estilo entrevista 
 
 👉 (te lo dicen hablando, no tan prolijo)
 

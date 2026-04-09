@@ -1,4 +1,4 @@
-🧪 PARTE 1 — React (NZ REAL, distinto)
+🧪 PARTE 1 — React
 🧩 Enunciado
 
 👉 Multi-Select Dropdown with Async Search

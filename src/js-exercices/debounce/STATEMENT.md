@@ -2,7 +2,7 @@
 
 Ahora pasamos a:
 
-🧪 PARTE 2 — Algoritmo (NZ real)
+🧪 PARTE 2 — Algoritmo 
 
 Nada académico raro.
 

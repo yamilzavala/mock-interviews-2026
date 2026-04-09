@@ -1,7 +1,5 @@
 🚀 PARTE FINAL — Behavioral (rápida pero clave)
 
-Ahora viene algo que en NZ pesa bastante: cómo comunicás tu experiencia
-
 🎤 Pregunta 3
 
 👉 Respondé en inglés (como en entrevista):
@@ -142,8 +140,7 @@ From this experience, I learned that sometimes it's better to prioritize deliver
 
 ----------------------------------------------------------------
 
-🚀 PARTE FINAL — Behavioral (NZ style real)
-Esta es MUY típica en NZ (colaboración + ownership).
+🚀 PARTE FINAL — Behavioral 
 🎤 Pregunta
 👉 Respondé en inglés:
 “Tell me about a time you had to learn something quickly to complete a task.”
