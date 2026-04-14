@@ -17,14 +17,10 @@ export function useAutocomplete(query, fetchFn) {
   const abortRef = useRef(null)
 
   useEffect(() => {
-    if(!debouncedValue) return;
-
-    //abort
-    if(abortRef.current) {
-      abortRef.current.abort()
-    }
-    const controller = new AbortController()
-    abortRef.current = controller;
+    if(!debouncedValue) {
+      setResults([])
+      return
+    };
 
     //cache
     const now = Date.now()
@@ -33,6 +29,14 @@ export function useAutocomplete(query, fetchFn) {
       setResults(cached.data)
       return;
     }
+    
+    //abort
+    if(abortRef.current) {
+      abortRef.current.abort()
+    }
+    const controller = new AbortController()
+    abortRef.current = controller;
+
 
     const fetchData = async () =>  {
       try {

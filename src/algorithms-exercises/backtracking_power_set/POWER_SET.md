@@ -1,7 +1,5 @@
 🧠 TEMPLATE MENTAL — SUBSETS (ITERATIVO)
-
 👉 Este es el patrón único:
-
 result = [[]]
 
 for cada elemento num en nums:
@@ -20,14 +18,12 @@ for (const num of nums) {
     result.push([...result[i], num]);
   }
 }
-🧠 Cómo pensarlo (lo importante)
 
+🧠 Cómo pensarlo (lo importante)
 👉 “Por cada número, duplico todos los subsets existentes y les agrego ese número”
 
 ⚠️ REGLA CRÍTICA (la que te hace senior)
-
 👉 Siempre trabajás sobre:
-
 size = result.length
 
 👉 Nunca sobre result.length dinámico

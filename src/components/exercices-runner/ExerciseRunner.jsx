@@ -8,6 +8,9 @@ import { longestSubStrWithK } from "../../algorithms-exercises/slidingWindow/lon
 import { productLessMe } from "../../algorithms-exercises/prefix-sufix/productLessMe/productLessMe";
 import { power_set } from "../../algorithms-exercises/backtracking_power_set/power_set/backtracking_power_set";
 import { anagramsGroup, anagramsGroupSort } from "../../algorithms-exercises/categorization/anagramsGroup /anagramsGroup";
+import { mergeInterval } from "../../algorithms-exercises/sorting_and_greedy/greedy/mergeInterval";
+import { validateParentheses } from "../../algorithms-exercises/stack/validateParentheses/validateParentheses";
+import { topKFrequent } from "../../algorithms-exercises/hash-map/hash-k-elements/topKFrequent";
 
 
 export default function ExerciseRunner() {
@@ -25,7 +28,10 @@ export default function ExerciseRunner() {
     // const res = productLessMe(JSON.parse(input));
     // const res = power_set(JSON.parse(input));
     // const res = anagramsGroup(JSON.parse(input));
-    const res = anagramsGroupSort(JSON.parse(input));
+    // const res = anagramsGroupSort(JSON.parse(input));
+    // const res = mergeInterval(JSON.parse(input));
+    // const res = validateParentheses(input);
+    const res = topKFrequent(JSON.parse(input), 2);
     console.log(res)
     setResult(res);
   };

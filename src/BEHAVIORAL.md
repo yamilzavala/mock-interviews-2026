@@ -271,3 +271,71 @@ I also volunteered to take ownership of those tasks and coordinate the process a
 This helped bring more structure to the work, improved visibility, and allowed us to move forward more efficiently.
 
 From this experience, I learned that taking initiative in unclear situations can significantly improve team alignment and delivery.
+
+-----------------------------------------------------------
+
+
+🧪 PARTE 3 — Behavioral (nivel NZ final round)
+🎤 Pregunta
+
+👉 Respondé en inglés:
+
+“Tell me about a time you disagreed with a technical decision.”
+
+⚠️ FOLLOW-UP
+
+Después te voy a preguntar:
+
+“What was the outcome?”
+
+💯 Respuesta nivel senior
+A few months ago, I was involved in a discussion about how to implement a feature where a teammate proposed a very generic and abstract solution intended to be reusable across multiple use cases.
+While the approach was technically correct, I felt it introduced unnecessary complexity for the current scope and would make the code harder to understand and maintain.
+I shared my perspective with the team, explaining that a simpler and more explicit solution would better fit the current requirements, and that we could refactor later if we actually needed that level of abstraction.
+We discussed both approaches, and eventually agreed on implementing the simpler version first.
+This allowed us to deliver faster and keep the codebase more readable, while still leaving room for future improvements if needed.
+
+
+In that case, we were building a fairly complex data table with features like sorting and collapsible rows.
+One of the proposed solutions was to design a very generic and highly abstract component to support multiple future use cases.
+While that approach was technically solid, I felt it added unnecessary complexity for the current requirements.
+So I suggested focusing on a simpler implementation tailored to the current data and use case, with the idea of refactoring and generalizing it later if needed.
+This allowed us to move faster and keep the code more readable and maintainable.
+
+
+-------------------------------------------
+
+🎤 Pregunta
+👉 Respondé en inglés:
+“Tell me about a time you had to handle a tight deadline.”
+
+💯 Versión optimizada
+A few months ago, I was working on a cross-application migration with a very tight deadline.
+The task was quite complex, and initially I tried to solve it on my own, even experimenting with some automation approaches, but progress was slow and I realized I was getting blocked.
+At that point, I decided to raise it early and asked for help from a more experienced teammate. After discussing the problem, I was able to unblock myself and move forward more efficiently.
+To manage the deadline, I broke the work into smaller tasks and focused on delivering incremental progress instead of trying to solve everything at once.
+As a result, we were able to complete the migration on time, and the outcome met expectations.
+
+⚠️ FOLLOW-UP
+Después te voy a preguntar:
+“How did you prioritize your work?”
+
+💯 Versión optimizada
+I focused first on the critical parts of the migration that could block other areas, and then moved to smaller, independent tasks. I also made sure to communicate progress frequently to keep the team aligned.
+
+
+-------------------------------------------
+🎤 Pregunta
+👉 Respondé en inglés:
+“Tell me about a time you had to deal with ambiguity in a project.”
+
+⚠️ FOLLOW-UP
+“How did you ensure progress without clear requirements?”
+
+💯 Respuesta (lista para entrevista)
+A few months ago, I was working on a task where we needed to analyze and validate how different microfrontends were consuming backend endpoints, especially related to domain segmentation.
+The challenge was that the requirements were not fully defined, and there was no clear source of truth. Some information was available in internal tools, but it wasn’t always accurate, and the actual usage sometimes differed in the codebase.
+To move forward, I decided to break the problem into smaller steps. First, I gathered all available information from internal systems. Then, I started validating it directly against the code in each microfrontend to ensure accuracy.
+I also communicated frequently with other teams to clarify edge cases and confirm assumptions.
+By combining automated data with manual validation, I was able to build a more reliable dataset and keep making progress despite the ambiguity.
+This approach allowed us to move forward without waiting for perfect requirements, while still maintaining accuracy.
