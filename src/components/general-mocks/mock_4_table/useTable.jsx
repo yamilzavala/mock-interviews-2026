@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 
 const ITEMS_PER_PAGE = 5;
 
@@ -75,8 +75,12 @@ export function useTable(data) {
   }, [processedData, page]);
 
   const totalPages = useMemo(() => {
-    return Math.ceil(processedData.length / ITEMS_PER_PAGE);
-  }, [processedData]);
+    return Math.max(Math.ceil(processedData.length / ITEMS_PER_PAGE), 1);
+  }, [processedData.length]);
+
+  useEffect(() => {
+    setPage((current) => (current > totalPages ? totalPages : current));
+  }, [totalPages]);
 
   return {
     paginatedData,

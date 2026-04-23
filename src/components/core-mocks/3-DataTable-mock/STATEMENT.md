@@ -1,17 +1,22 @@
 🧪 PARTE 1 — React (nivel alto)
 🧩 Enunciado
-
 👉 DataTable
-
 Requisitos
-
 Tenés que construir una tabla que:
-
 1️⃣ Reciba datos por props
 [
   { id: 1, name: "John", age: 28 },
-  { id: 2, name: "Ana", age: 22 }
+  { id: 2, name: "Ana", age: 22 },
+  { id: 3, name: "Paul", age: 32 },
+  { id: 4, name: "Jack", age: 40 },
+  { id: 5, name: "Marie", age: 35 },
+  { id: 6, name: "Stefany", age: 56 },
+  { id: 7, name: "Angie", age: 33 },
+  { id: 8, name: "Luck", age: 19 },
+  { id: 9, name: "John", age: 22 },
+  { id: 10, name: "Sofie", age: 46 },
 ]
+
 2️⃣ Funcionalidades
 ✔ Sorting
 click en header → ordenar asc/desc
@@ -20,18 +25,19 @@ debe ser genérico (cualquier columna)
 filtrar por name
 ✔ Pagination
 5 items por página
+
 3️⃣ Condiciones importantes
 no recalcular innecesariamente
 no mutar el array original
 manejar bien estado derivado
 evitar renders innecesarios
+
 ⭐ Bonus
 memorizar filas (React.memo)
 custom hook
+
 🎤 Pregunta 1
-
 👉 explicame:
-
 qué estado usarías
 cómo manejarías sorting
 cómo combinarías search + pagination

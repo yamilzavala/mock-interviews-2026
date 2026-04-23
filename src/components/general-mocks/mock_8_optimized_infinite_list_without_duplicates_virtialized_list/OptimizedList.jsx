@@ -45,11 +45,16 @@ export default function VirtualizedInfiniteList() {
     }
 
     //nueva instancia
-    abortRef.current = new AbortController()
+    const controller = new AbortController();
+    abortRef.current = controller;
 
     try {
         setError(null)
-        const resp = await fetch(`${API}?q=${debouncedValue}&_limit=10&_page=${currPage.current}`)
+        isFeachingRef.current = true;
+        const resp = await fetch(
+          `${API}?q=${debouncedValue}&_limit=10&_page=${currPage.current}`,
+          {signal: controller.signal}
+        )
         
         if(!resp.ok) {
             throw new Error('Something went wrong')

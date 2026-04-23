@@ -1,90 +1,45 @@
-🧪 PARTE 1 — React práctico (nuevo escenario)
 🧩 Enunciado
-
-Tenés que construir un componente:
-
-👉 InfiniteScrollPosts
+👉 Optimized Infinite List (con filtro + scroll)
 
 Requisitos
-Consumir esta API:
-https://jsonplaceholder.typicode.com/posts?_limit=10&_page=1
-Funcionalidades
-1️⃣ Mostrar posts
-title
-body
-2️⃣ Infinite scroll
-cuando el usuario llega al final → cargar más posts
-paginar usando _page
-3️⃣ Estados
-⏳ loading
-❌ error
-🧠 Condiciones importantes
-no duplicar requests
-evitar múltiples llamadas simultáneas
-append de datos (no reemplazar)
-manejar correctamente el “no hay más datos”
-⭐ Bonus
-usar Intersection Observer en vez de scroll event
-optimizar renders
-🎤 Pregunta 1
+Tenés que construir:
+lista de items (pueden ser 1000+)
+filtro por texto
+infinite scroll
+evitar lag
 
-Antes de codear:
+⚠️ Problemas reales
+👉 El entrevistador te dice:
+“When I scroll fast, performance drops and I see duplicate items sometimes.”
 
-👉 explicame:
+🎤 Pregunta 1 (como entrevistador)
+👉 Explicame:
+qué podría estar causando ese problema
+cómo lo diagnosticarías
+cómo lo solucionarías
 
-qué estados usarías
-cómo manejarías el infinite scroll
-cómo evitarías múltiples requests
-cómo estructurarías el componente
+⚠️ FOLLOW-UP (te interrumpo)
+“You said performance issues… how exactly would you prevent unnecessary renders?”
 
------------------------------------------------------------------
+⚠️ FOLLOW-UP 2
+“What if the API returns duplicated items?”
 
-2️⃣ Explicación SENIOR (en inglés)
+-------------------------------------------------
 
-I would use state for posts, loading, error, page, and hasMore.
+🎤 Senior Explanation (Virtualized Infinite List)
 
-To implement infinite scroll, I would use the Intersection Observer API with a ref element at the bottom of the list.
+“To solve this problem, I approached it by separating performance concerns from data consistency and request management.
 
-When that element becomes visible, I would trigger a fetch for the next page.
+First, for performance, since the list can grow to hundreds or thousands of items, I used list virtualization with react-window. This ensures that only the visible items are rendered in the DOM, which significantly reduces rendering cost and avoids UI lag when scrolling fast.
 
-To avoid multiple requests, I would use loading and hasMore flags.
+When using virtualization, one important consideration is that not all items are mounted in the DOM at the same time. Because of that, I cannot rely on techniques like observing the last DOM element with IntersectionObserver.
 
-When fetching new data, I would append it to the existing posts using setPosts(prev => [...prev, ...newPosts]).
+Instead, I use the onItemsRendered callback provided by react-window. This gives me access to the visible index range, and I trigger the next data fetch when the user scrolls close to the end of the list, for example when the visible stop index is near the total number of items.
 
-If the API returns fewer items than expected, I would set hasMore to false to stop further requests.
+For data fetching, I implemented a request lock using a ref to prevent multiple concurrent requests when the user scrolls quickly. This avoids duplicated API calls and race conditions.
 
-I would also encapsulate the observer logic in a custom hook to keep the component clean.
+Additionally, I handle pagination using a ref instead of state, so I can increment the page without causing unnecessary re-renders.
 
-Esto es lo que dirías en una entrevista 👇
+To ensure data consistency, I always deduplicate the items on the client side using a Map keyed by a unique identifier, such as the item id. This guarantees that even if the API returns overlapping data or duplicate responses occur, the UI remains consistent.
 
-✅ States
-
-I would manage the following states:
-
-posts: to store the accumulated list of posts
-page: to control pagination
-loading: to prevent concurrent requests and show UI feedback
-error: to handle API failures
-hasMore: to determine when there are no more results to fetch
-✅ Infinite Scroll Strategy
-
-I would use the Intersection Observer API to detect when the user reaches the bottom of the list.
-
-Specifically, I would place a sentinel element at the end of the list and trigger a new fetch whenever that element becomes visible.
-
-✅ Avoid Multiple Requests
-
-To prevent multiple or duplicated requests:
-
-I would guard the fetch with a loading flag
-I would also check hasMore before triggering new requests
-Additionally, I would ensure the observer callback is stable using useCallback to avoid unnecessary re-instantiations
-✅ Component Structure
-
-I would split the logic into:
-
-A main component responsible for state management and rendering
-A reusable hook (e.g. useInfiniteScroll) to encapsulate observer logic
-
-This keeps the component clean and improves reusability and testability.
-
+Overall, this approach ensures smooth scrolling performance, prevents duplicate data, and handles large datasets efficiently.”

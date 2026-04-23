@@ -40,21 +40,21 @@ export default function DataTable({ data }) {
       <table border="1">
         <thead>
           <tr>
-            <th onClick={() => handleSort("id")}>
+            <th onClick={() => {handleSort("id"); setPage(1)}}>
               ID {sort.key === "id" ? (sort.direction === "asc" ? "↑" : "↓") : ""}
             </th>
-            <th onClick={() => handleSort("name")}>
+            <th onClick={() => {handleSort("name"); ; setPage(1)}}>
               Name{" "}
               {sort.key === "name" ? (sort.direction === "asc" ? "↑" : "↓") : ""}
             </th>
-            <th onClick={() => handleSort("age")}>
+            <th onClick={() => {handleSort("age"); ; setPage(1)}}>
               Age {sort.key === "age" ? (sort.direction === "asc" ? "↑" : "↓") : ""}
             </th>
           </tr>
         </thead>
 
         <tbody>
-          {paginatedData.map((item) => (
+          {paginatedData?.map((item) => (
             <Row key={item.id} item={item} />
           ))}
         </tbody>

@@ -54,20 +54,20 @@ const Autocomplete = () => {
 
   const handleKeyDown = useCallback(
     (e) => {
-      if (!isOpen || !results.length) return;
+      if (!isOpen || !results?.length) return;
 
       switch (e.key) {
         case "ArrowDown":
           e.preventDefault();
           setHighlightedIndex((prev) =>
-            (prev + 1) % results.length
+            (prev + 1) % results?.length // Math.min(prev + 1, results.length -1)
           );
           break;
 
         case "ArrowUp":
           e.preventDefault();
           setHighlightedIndex((prev) =>
-            (prev - 1 + results.length) % results.length
+            (prev - 1 + results.length) % results?.length // Math.max(prev - 1, 0)
           );
           break;
 
