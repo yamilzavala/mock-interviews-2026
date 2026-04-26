@@ -1,42 +1,39 @@
 🧪 PARTE 1 — React (nivel alto real)
 🧩 Enunciado
-
 👉 DebouncedSearchWithCache
-
 Requisitos
 
 Tenés que construir un componente que:
-
 1️⃣ Input de búsqueda
 el usuario escribe texto
 debounce de 300ms
+
 2️⃣ Fetch de resultados
-
 Simular o usar API:
-
 https://jsonplaceholder.typicode.com/users?name_like={query}
+
 3️⃣ Cache
-
 👉 Si el usuario repite una búsqueda:
-
 NO hacer request otra vez
 usar cache
+
 4️⃣ Estados
 loading
 error
 results
+
 🧠 Condiciones importantes
 evitar race conditions
 evitar requests innecesarios
 no mutar estado
 UX fluida
+
 ⭐ Bonus
 cancelar requests previos
 optimizar renders
+
 🎤 Pregunta 1
-
 👉 explicame:
-
 qué estado usarías
 cómo implementarías debounce
 cómo implementarías cache

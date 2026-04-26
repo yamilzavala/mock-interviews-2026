@@ -1,4 +1,6 @@
 import './App.css'
+import DynamicForm from './components/core-mocks/7-FormBuilder-mock/DynamicForm'
+import FormBuilder from './components/core-mocks/7-FormBuilder-mock/test/FormBuilder'
 import { fileData } from './components/general-mocks/mock_14_recursive_tree/data'
 
 
@@ -23,7 +25,6 @@ function App() {
        {/* <ExerciseRunner /> */}
 
        {/* <FileExplorer data={fileData}/> */}
-
 
       </section>
     </>

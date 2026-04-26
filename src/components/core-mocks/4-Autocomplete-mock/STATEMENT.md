@@ -22,6 +22,11 @@ cerrar dropdown al seleccionar
 cerrar dropdown al hacer click afuera
 manejar loading state (simulado o real)
 
+5️⃣ Cache
+👉 Si el usuario repite una búsqueda:
+NO hacer request otra vez
+usar cache
+
 🧠 Condiciones
 evitar renders innecesarios
 manejar bien eventos

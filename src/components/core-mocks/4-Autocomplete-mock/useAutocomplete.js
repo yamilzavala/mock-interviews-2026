@@ -9,6 +9,9 @@ const useAutocomplete = (fn, query) => {
 
   const controllerRef = useRef(null)
 
+  // cache
+  const cacheRef = useRef(new Map());
+
   useEffect(() => {
     if(!debouncedValue) {
       setResults([])
@@ -22,9 +25,19 @@ const useAutocomplete = (fn, query) => {
     controllerRef.current = controller;
 
     const fetchData = async () => {
+      // check cache
+      if(cache.current.has(debouncedValue)) {
+        setResults(cache.current.get(debouncedValue))
+        return;
+      }
+
       try {
         setLoading(true)
         const data = await fn(debouncedValue, controller.signal)
+        
+        //save cache
+        cacheRef.current.set(debouncedValue, data)
+        
         setResults(data)
       } catch (error) {
         if(error.name !== 'AbortError') {

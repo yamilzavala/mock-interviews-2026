@@ -1,6 +1,5 @@
 🧪 PARTE 1 — React práctico (principal)
 🧩 Enunciado
-
 Tenés que construir un componente:
 👉 UserList
 Requisitos:
@@ -13,8 +12,8 @@ Agregar:
 ❌ error state
 Bonus (si llegás):
 debounce en el search
-🎤 Lo que quiero ver
 
+🎤 Lo que quiero ver
 Antes de codear, respondeme:
 ❓ Pregunta 1
 
