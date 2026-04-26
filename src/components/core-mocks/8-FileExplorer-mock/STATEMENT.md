@@ -29,11 +29,14 @@ cómo escalarías esto a miles de nodos
 ---------------------------------------------------------
 
 💯 Versión ideal (nivel top candidate)
-I would store expansion state separately using a Set of expanded node IDs for O(1) operations.
-Rendering would be recursive, where each node conditionally renders its children if it is expanded.
-For sorting, I would separate directories and files, sort each group alphabetically, and then merge them.
-To optimize performance, I would memoize node components and avoid unnecessary re-renders using stable props and callbacks.
-For very large trees, I would consider virtualization to render only visible nodes.
-This approach keeps the UI responsive and scalable.
+“I would store the expansion state using a Set of expanded node IDs for efficient lookup.
+
+The tree would be rendered recursively, where each node renders its children only if it is expanded.
+
+For sorting, I would separate folders and files, sort each group alphabetically, and then merge them.
+
+To optimize performance, I would memoize node components and ensure stable props using useCallback.
+
+For large trees, I would consider lazy loading children when expanding nodes and possibly virtualization to render only visible elements.”
 
  

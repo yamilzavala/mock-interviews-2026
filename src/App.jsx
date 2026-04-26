@@ -1,7 +1,7 @@
 import './App.css'
-import DynamicForm from './components/core-mocks/7-FormBuilder-mock/DynamicForm'
-import FormBuilder from './components/core-mocks/7-FormBuilder-mock/test/FormBuilder'
-import { fileData } from './components/general-mocks/mock_14_recursive_tree/data'
+import UserList from './components/core-mocks/1-UserList-mock/UserList'
+import {fileData} from './components/core-mocks/8-FileExplorer-mock/data'
+
 
 
 
@@ -24,7 +24,7 @@ function App() {
       <section id="center">
        {/* <ExerciseRunner /> */}
 
-       {/* <FileExplorer data={fileData}/> */}
+      <UserList />
 
       </section>
     </>

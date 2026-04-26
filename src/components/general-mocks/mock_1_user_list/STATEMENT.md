@@ -1,29 +1,24 @@
 🧪 PARTE 1 — React práctico (principal)
 🧩 Enunciado
-
 Tenés que construir un componente:
-
 👉 UserList
-
 Requisitos:
-
 Consumir esta API:
 https://jsonplaceholder.typicode.com/users
 Mostrar una lista de usuarios (name + email)
+
 Agregar:
 🔍 input de búsqueda (filtra por nombre)
 ⏳ loading state
 ❌ error state
+
 Bonus (si llegás):
 debounce en el search
+
 🎤 Lo que quiero ver
-
 Antes de codear, respondeme:
-
 ❓ Pregunta 1
-
 ¿Cómo encararías este problema?
-
 qué estados necesitás
 qué hooks usarías
 cómo estructurarías el componente
