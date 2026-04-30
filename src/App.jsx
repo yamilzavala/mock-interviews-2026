@@ -1,9 +1,6 @@
 import './App.css'
-import UserList from './components/core-mocks/1-UserList-mock/UserList'
 import {fileData} from './components/core-mocks/8-FileExplorer-mock/data'
-
-
-
+import UsersPage from './components/full-interview/users-table/UsersPage'
 
 const dataTabla = [
   { id: 1, name: "John", age: 28 },
@@ -24,7 +21,7 @@ function App() {
       <section id="center">
        {/* <ExerciseRunner /> */}
 
-      <UserList />
+      <UsersPage />
 
       </section>
     </>
