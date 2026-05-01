@@ -19,10 +19,12 @@ const useFetchData = (url, params) => {
   //effect + fetchData + abortControler (race conditions) + cache  
   useEffect(() => {
     const fetchData = async () => {
-        // cache
-        if(cacheRef.current.has(debouncedValue)) {
-            setData(cacheRef.current.get(debouncedValue))
-            return;
+        // cache hit
+        if (cacheRef.current.has(debouncedValue)) {
+            const cached = cacheRef.current.get(debouncedValue)
+            setData(cached.data)
+            setPagination(cached.pagination)
+            return
         }
 
         // abort
@@ -40,13 +42,19 @@ const useFetchData = (url, params) => {
             
             const parsedParams = JSON.parse(debouncedValue);
             const queryString = new URLSearchParams(parsedParams).toString();
-            const resp = await fetch(`${url}?${queryString}`)
+            const resp = await fetch(
+                `${url}?${queryString}`,
+                {signal: controller.signal}
+            )
 
             if(!resp.ok) {
                 throw new Error('Something went wrong')
             }
 
             const jsonData = await resp.json()
+
+            // save cache
+            cacheRef.current.set(debouncedValue, jsonData)
 
             setData(jsonData.data)
             setPagination(jsonData.pagination)
