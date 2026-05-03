@@ -1,7 +1,5 @@
 
-
 🧠 PATRÓN REAL — SLIDING WINDOW (template único)
-
 👉 Este es el que tenés que memorizar:
 
 let left = 0;
@@ -19,15 +17,13 @@ for (let right = 0; right < arr.length; right++) {
   // 3. actualizo resultado
   actualizar_resultado(left, right);
 }
+
 🔥 LA IDEA CLAVE
-
 👉 Siempre:
-
 right → EXPANDE
 left → CONTRAE
 
 👉 y la regla es:
-
 mantené la ventana válida
 
 ----------------
@@ -77,7 +73,6 @@ como máximo k distintos
 ----------------
 
 ⚡ VARIANTE 3 — Ventana fija (k tamaño)
-
 👉 ESTE es distinto (importante)
 
 let windowSum = 0;
@@ -102,22 +97,25 @@ for (let i = k; i < arr.length; i++) {
 
 🧠 DIFERENCIA CLAVE ENTRE TIPOS
 🟢 Ventana dinámica
+
 tamaño cambia
 usa while
 while (condición) {
   left++;
 }
+
 🔵 Ventana fija
 tamaño constante
 no usa while
+
 🎯 REGLA DE ORO
-
 👉 preguntate:
-
 ¿Estoy trabajando con subarrays / substrings?
 👉 sliding window
+
 ¿Necesito mantener una condición en una ventana?
 👉 sliding window
+
 ¿la ventana crece y se achica?
 👉 sliding window dinámica
 ----------------------------------------------
@@ -146,9 +144,9 @@ for (right ...) {
 
 🔥 Ahora te explico tus 3 ejemplos SIN humo
 1️⃣ Longest Substring (sin repetir)
+
 while(set.has(s[right]))
 🧠 Traducción mental:
-
 👉 “mientras haya duplicados → achico”
 
 condición = rompí la regla
@@ -157,9 +155,9 @@ entonces achico
 👉 objetivo: ventana válida (sin repetidos)
 
 2️⃣ Maximum Sum Subarray (k fijo)
+
 // no hay while
 🧠 Traducción mental:
-
 👉 “la ventana SIEMPRE mide k”
 
 no hay condición
@@ -169,9 +167,9 @@ simplemente corrés la ventana
 👉 esto es sliding window pero modo automático
 
 3️⃣ Minimum Subarray ≥ target
+
 while(sum >= target)
 🧠 Traducción mental:
-
 👉 “ya cumplí → ahora achico para optimizar”
 
 condición = ya es válida
@@ -187,87 +185,46 @@ Fixed window	nunca decidís	tamaño fijo
 🧠 Regla de oro (esto te salva en entrevistas)
 
 👉 Preguntate SIEMPRE:
-
 ❓ ¿Cuándo debería mover left?
 
 Y hay solo 3 respuestas posibles:
-
 🔴 1. Cuando está inválido
-
 👉 achico para arreglar
 
 Ej:
-
 duplicados
 más de k caracteres
 violación de regla
+
 🟢 2. Cuando ya es válido
-
 👉 achico para optimizar
-
 Ej:
-
 suma ≥ target
 contiene todos los caracteres
 cumple condición mínima
+
 ⚪ 3. Nunca (tamaño fijo)
-
 👉 no decidís nada
-
 🧠 Cómo pensarlo sin confundirte
 
 En vez de pensar:
-
 ❌ “qué fórmula uso”
 
 Pensá:
-
 👉 “qué hace inválida la ventana?”
 👉 “cuándo debería achicar?”
 
 🔥 Ejercicio mental rápido (clave)
 
 Si yo te digo:
-
 “subarray con suma <= target”
 
 👉 ¿qué harías?
 
 Respuesta:
-
 si sum > target → achico
 
 💥 listo, ya sabés resolverlo
 
 🧠 Cómo explicarlo en entrevista (nivel senior)
-
 Sliding window no es una fórmula, es una técnica donde uso dos punteros. Expando la ventana con right y la contraigo con left dependiendo de si la ventana es inválida o si quiero optimizar el resultado.
-
-🚨 Lo que te está pasando (y es normal)
-
-No es que no entendés el patrón.
-
-👉 Estás intentando memorizar en lugar de razonar
-
-Y estos problemas:
-
-NO se memorizan
-se entienden con práctica de intuición
-🎯 Te dejo una forma simple de entrenarlo
-
-Cada vez que veas un problema:
-
-¿Es subarray / substring? → sí → sliding window
-¿Qué condición define válido?
-¿Cuándo muevo left?
-
-👉 y listo
-
-Si querés, en el siguiente paso hacemos esto:
-
-👉 te doy 3 problemas nuevos
-y te hago pensar como en entrevista
-(te guío paso a paso hasta que te salga solo)
-
-Ahí es donde realmente te destrabás.
-

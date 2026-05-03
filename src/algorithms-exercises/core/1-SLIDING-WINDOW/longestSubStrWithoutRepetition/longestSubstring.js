@@ -3,6 +3,7 @@ export function longestSubstring(s) {
     let left = 0;
     let max = 0;
 
+    // for + while + right decrement + left increment + add + update result
     for(let right = 0; right < s.length; right++) {
         while(set.has(s[right])) {
             set.delete(s[left])

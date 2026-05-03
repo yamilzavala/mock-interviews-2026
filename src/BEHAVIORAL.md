@@ -275,7 +275,7 @@ From this experience, I learned that taking initiative in unclear situations can
 -----------------------------------------------------------
 
 
-🧪 PARTE 3 — Behavioral (nivel NZ final round)
+🧪 PARTE 3 — Behavioral
 🎤 Pregunta
 
 👉 Respondé en inglés:

@@ -9,6 +9,8 @@ export function anagramsGroup(arr) {
         const freq = new Array(26).fill(0)
 
         // completo array con frecuencias
+        // charCodeAt(0) = “dame el número del carácter”
+        // - 97 = “ajustalo para que empiece en 0”
         for(const char of word) {
             const index = char.charCodeAt(0) - 97;
             freq[index]++;

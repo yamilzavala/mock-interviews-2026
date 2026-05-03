@@ -1,5 +1,4 @@
 🧠 PATRÓN REAL — TWO POINTERS (template mental)
-
 👉 Este es el equivalente al que ya conocés de sliding window:
 
 let left = 0;
@@ -21,15 +20,12 @@ while (left < right) {
 }
 
 🔥 LA IDEA CLAVE (esto es lo importante)
-
 👉 Siempre estás tomando decisiones con dos extremos
 
 Y la regla es:
-
 mover el puntero que te acerque al objetivo
 
 ⚡ VARIANTE 1 — Buscar un target (la más común)
-
 Ej: two sum en array ordenado
 
 while (left < right) {
@@ -49,7 +45,6 @@ while (left < right) {
 👉 Este es EL patrón que más te van a pedir.
 
 ⚡ VARIANTE 2 — Minimizar / maximizar diferencia
-
 Ej: closest sum
 
 while (left < right) {
@@ -68,7 +63,6 @@ while (left < right) {
 👉 Acá NO cortás, seguís buscando mejor resultado
 
 ⚡ VARIANTE 3 — Filtrar / reordenar (in-place)
-
 Ej: mover ceros, separar pares/impares
 
 while (left < right) {

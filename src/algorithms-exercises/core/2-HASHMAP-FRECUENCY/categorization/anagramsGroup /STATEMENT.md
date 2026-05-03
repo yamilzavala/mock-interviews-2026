@@ -37,7 +37,7 @@ performance
 
 -------------------------------------------
 
-💯 Versión ideal (nivel top candidate)
+💯 Versión ideal (sin sort permitido)
 
 I would group anagrams using a hash map.
 
@@ -50,3 +50,15 @@ This allows me to group words efficiently without sorting.
 This approach runs in O(n * k) time, which is more efficient than sorting-based solutions.
 
 Finally, I return the grouped values from the map.
+
+--------------------------------------------
+
+💯 Versión ideal (con orden permitido)
+
+I use a HashMap where the key is a normalized version of the word.
+
+For each word, I sort its characters to generate a canonical representation.
+
+Anagrams will produce the same key, so I group them together in the map.
+
+Finally, I return all the grouped values.

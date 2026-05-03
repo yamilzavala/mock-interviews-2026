@@ -1,15 +1,10 @@
-🚀 PARTE 2 — Algoritmo (muy típico NZ)
-
+🚀 PARTE 2 — Algoritmo
 Este es MUY común en entrevistas frontend.
-
 🧩 Enunciado
-
 Dado un array de números:
-
 [1,3,5,7,9,11]
 
 👉 y un número target:
-
 8
 
 👉 encontrar dos números cuya suma sea la más cercana al target.
@@ -18,12 +13,10 @@ Output esperado
 7 + 1 = 8 → exacto
 
 o si no es exacto:
-
 closest possible
+
 🎤 Pregunta 2
-
 👉 explicame:
-
 qué patrón usarías
 cómo lo resolverías
 complejidad esperada
@@ -40,6 +33,7 @@ Actualizás resultado (SI corresponde)
 Evaluás si terminás (sum === target)
 Movés punteros
 
+-----------------------------------------------------------
 
 💯 Versión ideal (nivel top)
 I would use a two-pointer approach since the array is sorted.

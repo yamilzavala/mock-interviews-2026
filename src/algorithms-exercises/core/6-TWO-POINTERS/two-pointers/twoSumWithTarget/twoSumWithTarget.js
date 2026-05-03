@@ -12,6 +12,7 @@ export function twoSumWithTarget(arr, target) {
     let closestDiff = Infinity;
     let result = [];
 
+    //sum + diff + validation && update + match + increase + decrease
     while(left < right) {
         const sum = arr[left] + arr[right];
         const diff = Math.abs(sum - target);
