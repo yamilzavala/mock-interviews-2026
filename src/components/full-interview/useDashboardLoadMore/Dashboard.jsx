@@ -30,7 +30,7 @@ const Dashboard = () => {
         placeholder='search by name'
         disabled={loading}
         value={loading ? 'loading...' : search}
-        onChange={(e) = searchHandler(e.target.value)}
+        onChange={(e) => searchHandler(e.target.value)}
         />
 
         {/* loading - error */}
@@ -51,7 +51,7 @@ const Dashboard = () => {
 
         {/* pagination */}
         {pagination?.hasMore && (
-            <button onClick={() => cursorPageHandler(pagination.cursor)}>Load more</button>
+            <button onClick={() => cursorPageHandler(pagination.nextCursor)}>Load more</button>
         )}
     </main>
   )
