@@ -1,0 +1,22 @@
+src/components/full-interview/dataTable/useTable.js
+  h_f392f4a323d128 1-9
+src/components/full-interview/dataTable/Row.jsx
+  h_f392f4a323d128 1-9
+src/App.jsx
+  h_f392f4a323d128 4,6-17
+src/components/full-interview/dataTable/DataTable.jsx
+  h_f392f4a323d128 1-9
+src/components/full-interview/dataTable/STATEMENT.md
+  h_f392f4a323d128 1-82
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "db17edbf9d6814894a3ae9cf0571bbbed3732bf2",
+  "prompts": {},
+  "humans": {
+    "h_f392f4a323d128": {
+      "author": "yazavala_meli"
+    }
+  }
+}
