@@ -78,7 +78,7 @@ const useTable = () => {
         console.error(err)
       }
     }
-  }, [search, sort, cursor])
+  }, [debouncedSearch, sort, cursor])
 
   // 🔥 auto fetch cuando cambia search o sort
   useEffect(() => {
