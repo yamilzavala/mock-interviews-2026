@@ -1,4 +1,4 @@
-🧪 PARTE 1 — React (NZ-style real scenario)
+🧪 PARTE 1 — React
 🧩 Enunciado
 
 👉 SearchableDropdown (Autocomplete)

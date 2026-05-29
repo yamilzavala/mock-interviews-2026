@@ -8,7 +8,7 @@ resultado[i] = (producto izquierda) * (producto derecha)
 
 const result = new Array(n).fill(1);
 
-// 1. pasada izquierda → derecha (prefix)
+// 1. pasada izquierda → derecha (prefix) => producto de todo lo que esta antes de "i", no incluye elemento actual
 // igualo y multiplico
 let prefix = 1;
 for (let i = 0; i < n; i++) {

@@ -1,6 +1,9 @@
 import './App.css'
 import {fileData} from './components/core-mocks/8-FileExplorer-mock/data'
+import FileExplorer from './components/core-mocks/8-FileExplorer-mock/FIleExplorer'
+import Autocomplete from './components/full-interview/autocomplete/Autocomplete'
 import DataTable from './components/full-interview/dataTable/DataTable'
+import LikeButton from './components/full-interview/optimisticLikeButton/LikeButton'
 import Dashboard from './components/full-interview/searchUsersLoadMore/Dashboard'
 
 // const dataTabla = [
@@ -22,8 +25,8 @@ function App() {
       <section id="center">
        {/* <ExerciseRunner /> */}
 
-      {/* <Dashboard /> */}
-      <DataTable />
+        {/* <FileExplorer data={fileData} /> */}
+        <Autocomplete />
 
       </section>
     </>

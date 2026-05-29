@@ -43,7 +43,7 @@ Follow-up questions (muy importantes):
 
 -------------------------------------------------
 
-🎤 Respuesta senior (como la dirías en NZ)
+🎤 Respuesta senior
 
 “I would approach this by modeling the component as a small state machine with three main states: idle, loading, and error, along with a liked flag.
 

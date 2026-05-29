@@ -33,13 +33,8 @@ As a result, I was able to stabilize the application and successfully complete t
 
 
 🧪 PARTE FINAL — Behavioral
-
-Última parte (esto define cultural fit, muy importante en NZ).
-
 🎤 Pregunta 3
-
 👉 Respondé en inglés:
-
 “Tell me about a time you disagreed with a technical decision on your team. What did you do?”
 
 ❗ Lo que voy a evaluar
@@ -161,7 +156,7 @@ From this experience, I learned that breaking down a new tool into small experim
 
 ----------------------------------------------------------------
 
-🚀 PARTE FINAL — Behavioral (nivel avanzado NZ)
+
 
 Esta es más profunda y evalúa liderazgo.
 
@@ -189,7 +184,6 @@ From this experience, I learned that when dealing with ambiguity, it's important
 
 🚀 PARTE FINAL — Behavioral (nivel final round)
 
-Ahora viene una de las más difíciles (muy usada en NZ).
 
 🎤 Pregunta
 
@@ -242,7 +236,6 @@ This has helped me avoid delays and keep better alignment with the team.
 
 ---------------------------------------------------------------------
 
-🧪 PARTE 3 — Behavioral (nivel final round NZ)
 🎤 Pregunta
 
 👉 Respondé en inglés:
@@ -339,3 +332,52 @@ To move forward, I decided to break the problem into smaller steps. First, I gat
 I also communicated frequently with other teams to clarify edge cases and confirm assumptions.
 By combining automated data with manual validation, I was able to build a more reliable dataset and keep making progress despite the ambiguity.
 This approach allowed us to move forward without waiting for perfect requirements, while still maintaining accuracy.
+
+--------------------------------------------
+
+🎤 Behavioral
+👉 Respondé:
+“Tell me about a time you disagreed with a technical decision on your team.”
+
+💯 Respuesta (lista para entrevista)
+“In a recent project, we were implementing a new feature and there was a discussion about putting all state into a global store.
+
+I felt that some of the state was only relevant locally and that moving everything to global state would increase complexity and cause unnecessary re-renders.
+
+Instead of rejecting the idea, I explained my reasoning and proposed a hybrid approach, keeping shared data in the global store and local UI state within components.
+
+The team agreed, and the final implementation was simpler, easier to maintain, and improved performance by reducing unnecessary renders.
+
+This experience reinforced the importance of discussing trade-offs openly and finding balanced solutions as a team.”
+
+--------------------------------------------
+
+🎤 Behavioral
+👉 “Tell me about a time you had to push back on a requirement.”
+
+💯 Respuesta (lista para entrevista)
+“In one project, we had a requirement to load a very large dataset in a table so users could see everything at once.
+
+I was concerned about performance and user experience, especially with thousands of rows, so I raised these concerns and aligned with the business goal of visibility.
+
+I proposed an alternative using server-side pagination, lazy loading, and virtualization, which would still allow users to access all data but in a more efficient way.
+
+The team agreed, and the final solution significantly improved performance, reduced memory usage, and provided a smoother user experience.
+
+This experience taught me the importance of balancing technical constraints with business needs.”
+
+--------------------------------------------
+
+🧠 PARTE 5 — Behavioral
+👉 “Tell me about a time you had to learn something quickly to complete a task.”
+ 
+💯 Respuesta (lista para entrevista)
+“Recently, I had to build a dashboard in Looker Studio to analyze user transaction traceability over six months.
+
+The challenge was that I had no prior experience with the tool and the task was time-sensitive.
+
+I quickly learned the basics through documentation and hands-on experimentation while simultaneously building the required SQL queries and visualizations.
+
+I was able to deliver the dashboard on time, enabling the team to track user behavior and analyze transaction patterns effectively.
+
+This experience reinforced my ability to learn quickly and deliver under pressure.”

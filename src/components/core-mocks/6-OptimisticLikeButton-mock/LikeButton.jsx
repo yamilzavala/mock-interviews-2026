@@ -28,11 +28,11 @@ const LikeButton = () => {
     // request id
     const requestId = ++requestIdRef.current;
 
-    // guardo  estado previo al request
+    // guardo estado previo al request
     prevStateRef.current[requestId] = {liked, count}
 
     //optimistic update
-    const nextCount = liked ? count + 1 : count - 1;
+    const nextCount = !liked ? count + 1 : count - 1;
 
     setCount(nextCount)
     setLiked((prev) => !prev)
@@ -62,7 +62,10 @@ const LikeButton = () => {
         <button onClick={() => handleClick()}>
             {liked ? 'Unlike ❤️' : 'Like 🤍'}
         </button>
+        
         {error && <p>Error: {error}</p>}
+
+        <p>Count: {count}</p>
     </div>
   )
 }
