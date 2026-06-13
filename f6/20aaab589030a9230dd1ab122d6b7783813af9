@@ -1,0 +1,14 @@
+src/algorithms-exercises/core/2-HASHMAP-FRECUENCY/hash-map/hash-k-elements/STATEMENT.md
+  h_95c4d9c34e3bf4 1-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "f620aaab589030a9230dd1ab122d6b7783813af9",
+  "prompts": {},
+  "humans": {
+    "h_95c4d9c34e3bf4": {
+      "author": "yazavala_meli <yamil.zavala@mercadolibre.com>"
+    }
+  }
+}
