@@ -51,6 +51,9 @@ const DynamicForm = () => {
         const value = values[item.id]
         const itemId = item.id;
 
+        const visible = !item.showIf || item.showIf(values)
+        if (!visible) return;
+
         // required
         if(item.required && !value) {
             errors[itemId] = `${item.label} required`;
@@ -59,7 +62,7 @@ const DynamicForm = () => {
     
         //number type
         if(item.type === 'number' && value && isNaN(Number(value))) {
-            errors[itemId] = 'Must be a number'
+            errors[itemId] = `${item.label} Must be a number`
         }
     })
 
@@ -67,14 +70,30 @@ const DynamicForm = () => {
   }
 
   // handle submit
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault()
 
     const validatedErrors = validationHandler()
+    setErrors(validatedErrors)
 
     if(Object.keys(validatedErrors).length > 0) {
-        setErrors(validatedErrors)
         return;
+    }
+
+    try {
+      const resp = await fetch('/api/forms', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(values)
+      })
+      
+      if(!resp.ok) {
+        throw new Errro('Failed to save form')
+      }
+    } catch (error) {
+      console.log('Error: ', error.message)
     }
 
     console.log('SUBMIT: ', values)
@@ -91,6 +110,7 @@ const DynamicForm = () => {
 
             return (
                 <FieldRenderer 
+                    key={field.id}
                     field={field} 
                     value={values[field.id]} 
                     onChange={(event) => onChangeHandler(field.id, event.target.value)} 

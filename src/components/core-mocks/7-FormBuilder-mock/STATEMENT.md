@@ -57,7 +57,9 @@ Each input would update the state through a generic handler.
 Validation would run on submit based on the field type.
 This approach is scalable because the form is driven entirely by configuration."
 
-------
+-------------------------------------------------
+
+🎤 Cómo lo explicás como senior (versión extendida)
 
 I would approach this by designing a schema-driven form system where the entire UI, behavior, and validation are derived from a configuration object. This allows the solution to scale across many forms without duplicating logic.
 
@@ -76,3 +78,12 @@ To optimize performance and avoid unnecessary re-renders, I would memoize field 
 For conditional fields, I would use a declarative showIf function in the schema to determine visibility based on current state, keeping dependencies explicit and centralized.
 
 If the form needed to scale further, I would consider integrating a validation library like Zod or a form management library like React Hook Form to improve performance and maintainability.
+
+-------------------------------------------------
+
+🚀 Seguimos (subimos presión)
+🎤 BACKEND FOLLOW-UP
+👉 “How would you persist and validate these dynamic forms on the backend?”
+
+🎤 Cómo lo explicás como senior
+I would send the form values as JSON to a POST endpoint. On the backend I would validate the payload again using the same schema rules, including required fields, data types, allowed values, and conditional fields. Since the form is dynamic, I would persist the submission as a JSON document in the database rather than creating columns for every field. This makes the solution scalable because new fields can be added through configuration without changing the backend implementation.

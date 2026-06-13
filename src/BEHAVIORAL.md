@@ -381,3 +381,16 @@ I quickly learned the basics through documentation and hands-on experimentation 
 I was able to deliver the dashboard on time, enabling the team to track user behavior and analyze transaction patterns effectively.
 
 This experience reinforced my ability to learn quickly and deliver under pressure.”
+
+-----------------------------------------------------------
+
+💯 Respuesta (lista para entrevista)
+Mistake → Investigation → Ownership → Fix → Learning
+
+Situation: I was implementing a new filtering feature in a React table used by internal users.
+
+Task: My responsibility was to improve how users searched and filtered records.
+
+Action: After deployment, some users reported that certain records were not appearing in the results. I investigated the issue and found that my filtering logic was excluding valid records. I fixed the bug, tested multiple scenarios, deployed a hotfix, and added extra test coverage.
+
+Result: The issue was resolved the same day, users were able to find all records again, and we improved our test coverage for future filtering changes.
