@@ -81,7 +81,7 @@ const DynamicForm = () => {
     }
 
     try {
-      const resp = await fetch('/api/forms', {
+      const resp = await fetch('http://localhost:3000/api/forms/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
