@@ -1,0 +1,16 @@
+src/BEHAVIORAL.md
+  h_95c4d9c34e3bf4 397-418
+src/algorithms-exercises/general/hash-map/hash-k-elements/STATEMENT.md
+  h_95c4d9c34e3bf4 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "e304753602b6cbe0d8563bfd3dec3eba2c2f6ea0",
+  "prompts": {},
+  "humans": {
+    "h_95c4d9c34e3bf4": {
+      "author": "yazavala_meli <yamil.zavala@mercadolibre.com>"
+    }
+  }
+}
