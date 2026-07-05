@@ -7,8 +7,8 @@ Tenés un botón de “Like”:
 muestra cantidad de likes
 usuario puede likear / deslikear
 API (simulada)
-POST /like
-POST /unlike
+PUT    /like
+DELETE /like
 
 🎯 Requisitos
 1️⃣ Optimistic UI
@@ -45,6 +45,14 @@ qué edge cases ves
 
 ⚠️ FOLLOW-UP
 “What if the server responds out of order?”
+
+-------------------------------------------
+
+🧠 Cómo debería sonar (versión top)
+
+“I would use an optimistic update to immediately update the UI and store the previous state for rollback.
+To avoid inconsistencies with rapid clicks, I would track requests using an ID and only allow the latest request to update the state, ignoring stale responses.
+This ensures consistency even if responses arrive out of order.”
 
 -------------------------------------------
 

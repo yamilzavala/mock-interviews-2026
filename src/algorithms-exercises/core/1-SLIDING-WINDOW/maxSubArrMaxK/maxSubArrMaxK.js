@@ -26,25 +26,28 @@
 
 // 👉 Por eso se necesita un Map con conteo de frecuencias
 
-export function maxSubArrMaxK(arr, k) {
-    let left = 0;
-    let map = new Map()
-    let maxLength = 0;
+const maxSubArrK = (arr, k) => {
+  let left = 0;
+  let max = 0;
+  const map = new Map();
 
-    for(let right = 0; right < arr.length; right++) {
-        map.set(arr[right], (map.get(arr[right]) || 0) + 1)
+  for (let right = 0; right < arr.length; right++) {
+    const currVal = arr[right];
+    map.set(currVal, (map.get(currVal) || 0) + 1);
 
-        while(map.size > k) {
-            const val = arr[left];
-            map.set(val, (map.get(val) - 1))
-            
-            if(map.get(val) === 0) {
-                map.delete(val)
-            }
-            left++;
-        } 
-        maxLength = Math.max(maxLength, (right - left + 1));
+    while (map.size > k) {
+      const leftVal = arr[left];
+      map.set(leftVal, map.get(leftVal) - 1);
+      if (map.get(leftVal) === 0) {
+        map.delete(leftVal);
+      }
+      left++;
     }
 
-    return maxLength;
-} 
+    if (map.size === k) {
+      max = Math.max(max, right - left + 1);
+    }
+  }
+
+  return max;
+};

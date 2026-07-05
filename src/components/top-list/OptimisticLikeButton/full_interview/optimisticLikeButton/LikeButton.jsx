@@ -4,6 +4,7 @@ const LikeButton = () => {
   // states
   const [liked, setLiked] = useState(false)
   const [count, setCount] = useState(0)
+
   const [error, setError] = useState(null)
   const [pending, setPending] = useState(false)
 
@@ -12,7 +13,6 @@ const LikeButton = () => {
   const prevStateRef = useRef({})
 
   const handleClick = async () => {
-
     // evitar spam click
     if (pending) return
 

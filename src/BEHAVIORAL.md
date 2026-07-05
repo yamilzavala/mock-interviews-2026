@@ -394,3 +394,25 @@ Task: My responsibility was to improve how users searched and filtered records.
 Action: After deployment, some users reported that certain records were not appearing in the results. I investigated the issue and found that my filtering logic was excluding valid records. I fixed the bug, tested multiple scenarios, deployed a hotfix, and added extra test coverage.
 
 Result: The issue was resolved the same day, users were able to find all records again, and we improved our test coverage for future filtering changes.
+
+
+-----------------------------------------------------------
+
+🎤 Behavioral
+Pregunta:
+Tell me about a time when you received difficult feedback on your code. How did you respond?
+
+💯 Respuesta (lista para entrevista)
+"One example that comes to mind is a pull request where a teammate pointed out that my implementation worked correctly, but the design wasn't ideal.
+
+Initially, my focus had been on delivering the feature, so I hadn't fully considered the long-term maintainability of the solution.
+
+Instead of defending my approach, I asked a few questions to better understand the reasoning behind the feedback. After discussing it, I realized there was a cleaner way to structure the code that reduced duplication and made it easier to extend in the future.
+
+I refactored the implementation, updated the tests, and pushed the changes.
+
+Since then, I've become more proactive about thinking beyond just making the code work. Now I try to consider readability, maintainability, and future scalability before opening a pull request.
+
+That experience reinforced the idea that code reviews are not just about finding mistakes—they're a collaborative process that helps everyone write better software."
+
+"The feedback was that I had mixed business logic with transformation logic inside the service layer. My teammate suggested extracting that responsibility into a dedicated transformer to keep the code easier to test and maintain. Looking back, I think it was the right decision."
